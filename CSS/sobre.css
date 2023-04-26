@@ -1,0 +1,34 @@
+.divTela1{
+    display: flex;
+}
+
+.divTelaDetailLeft{
+display: flex;
+width: 100%;
+background-color: rgba(0, 0, 0, 0.375);
+}
+
+.divTela1Left{
+    display: flex;
+    width: 50%;
+    height: auto;
+    background-image: url(/imagens/16.11.20-Pato-x-Atlântico-Foto-Mauricio-Moreira-3.jpg);
+    image-rendering: auto;
+    background-position: right;
+    border-right: solid goldenrod 3px;
+}
+
+.divTela1Right{
+    display: flex;
+    background-color: black;
+    width: 50%;
+    height: 600px;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    font-size: 20px;
+    text-align: i;
+    
+}
