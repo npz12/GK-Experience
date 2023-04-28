@@ -2,6 +2,11 @@
     display: flex;
 }
 
+.divTela2{
+    display: flex;
+    border-top: solid goldenrod 4px;
+}
+
 .divTelaDetailLeft{
 display: flex;
 width: 100%;
@@ -14,8 +19,9 @@ background-color: rgba(0, 0, 0, 0.375);
     height: auto;
     background-image: url(/imagens/16.11.20-Pato-x-Atlântico-Foto-Mauricio-Moreira-3.jpg);
     image-rendering: auto;
-    background-position: right;
+    background-position: 80% 50%;
     border-right: solid goldenrod 3px;
+    transform: rotatey(180deg);
 }
 
 .divTela1Right{
@@ -32,3 +38,34 @@ background-color: rgba(0, 0, 0, 0.375);
     text-align: i;
     
 }
+
+.divTela2Left{
+    display: flex;
+    background-color: black;
+    width: 50%;
+    height: 600px;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    font-size: 20px;
+    text-align: i;
+    
+}
+
+.divTela2Right{
+    display: flex;
+    width: 64.5%;
+    height: auto;
+    background-image: url(/imagens/nzgk.jpg);
+    image-rendering: auto;
+    background-position: 50% 30%;
+    border-left: solid goldenrod 3px;
+}
+
+.divTelaDetailRight{
+    display: flex;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.125);
+    }
