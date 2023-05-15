@@ -1,0 +1,30 @@
+
+.divInfluencias {
+    margin: 0;
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-image: url(/imagens/bginfluencias.png);
+    background-size: auto;
+    border-bottom: solid goldenrod 3px;
+}
+
+.divEffect {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.53);
+    align-items: center;
+    justify-content: center;
+
+}
+
+.divText{
+    display: flex;
+    color: gold;
+    font: bolder;
+    font-size: 35px;
+    align-items: center;
+    justify-content: center;
+}
