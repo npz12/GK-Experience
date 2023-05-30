@@ -14,12 +14,14 @@
 <body>
 
     <!-- Criar div para o Header -->
+    <!-- Criar div para o Header -->
     <div class="divHeader">
         <a href="/HTML/main.html" class="aLogo"> <img src="/imagens/istockphoto-1340012346-612x612-removebg-preview.png"
                 alt="Logo" class="imgLogo"> </a>
         <div class="divListaHeader">
-            <h4 class="liAulas">Treinos</h4>
-            <h4 class="liPosicionamento">Posicionamento</h4>
+            <a href="./treinos.html">
+                <h4 class="liAulas">Treinos</h4>
+            </a>
             <a href="/HTML/influencias.html">
                 <h4 class="liTecnicas">Influencias</h4>
             </a>
@@ -39,12 +41,35 @@
     <div class="divModal">
         <div class="divCadastro">
             <h4 id="h4Cadastro">Cadastro</h4>
-            <input type="text" id="iptNome" class="iptCadastro" placeholder="Nome:"> <br>
-            <input type="text" id="iptIdade" class="iptCadastro" placeholder="CPF:"> <br>
-            <input type="text" id="iptEmail" class="iptCadastro" placeholder="Email:"> <br>
-            <input type="password" id="iptSenha" class="iptCadastro" placeholder="Senha:"> <br>
-            <input type="password" id="iptConfirmSenha" class="iptCadastro" placeholder="Confirmar Senha:"> <br>
-            <button class="buttonCadastro">Entrar</button> <br>
+            <div class="field">
+                <input type="text" required autocomplete="off" id="iptNome">
+                <label for="iptNome" title="Nome:" data-title="Nome:"></label>
+            </div>
+
+            <div class="field">
+                <input type="text" required autocomplete="off" id="iptEmail">
+                <label for="iptEmail" title="Email:" data-title="Email:"></label>
+            </div>
+
+            <div class="field">
+                <input type="password" required autocomplete="off" id="iptSenha">
+                <label for="iptSenha" title="Senha:" data-title="Senha:"></label>
+            </div>
+
+            <div class="field">
+                <input type="password" required autocomplete="off" id="iptConfirmarSenha">
+                <label for="iptConfirmarSenha" title="Confirmar Senha:" data-title="Confirmar Senha:"></label>
+            </div>
+
+            <div class="field">
+                <select id="areaAtuacao">
+                    <option value="0"></option>
+                    <option value="1">Futsal</option>
+                    <option value="2">Society-Fut7</option>
+                    <option value="3">Campo-Fut11</option>
+                </select>
+            </div>
+            <button class="buttonCadastro" onclick="verify()">Entrar</button> <br>
         </div>
     </div>
 
@@ -67,3 +92,40 @@
 </body>
 
 </html>
+
+<script>
+
+    function verify() {
+        var nome = iptNome.value
+        var email = iptEmail.value
+        var senha = iptSenha.value
+        var confirmarSenha = iptConfirmarSenha.value
+        const rexec = /[0-9]/g;
+        const found = senha.match(rexec);
+
+        if (nome == "" || email == "" || senha == "" || confirmarSenha == "") {
+            alert("Por favor informe todos os dados.")
+        }
+
+        if (areaAtuacao.value == 0) {
+            alert("Por favor informe uma área de atuação.")
+        }
+
+        if (nome.length <= 2) {
+            alert("Informe um nome válido")
+        }
+
+        if (email.indexOf("@") == -1 || email.indexOf(".") == -1) {
+            alert("Informe um email válido.")
+        }
+
+        if ( senha.length < 8 || found.length == 0) {
+            alert("Informe uma senha válida. (Min. 8 caracteres e um número)")
+        }
+
+        if (confirmarSenha != senha) {
+            alert("As senhas não são iguais, por favor as informe corretamente.")
+        }
+    }
+
+</script>

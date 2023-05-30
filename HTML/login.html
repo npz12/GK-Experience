@@ -18,8 +18,9 @@
         <a href="/HTML/main.html" class="aLogo"> <img src="/imagens/istockphoto-1340012346-612x612-removebg-preview.png"
                 alt="Logo" class="imgLogo"> </a>
         <div class="divListaHeader">
-            <h4 class="liAulas">Treinos</h4>
-            <h4 class="liPosicionamento">Posicionamento</h4>
+            <a href="./treinos.html">
+                <h4 class="liAulas">Treinos</h4>
+            </a>
             <a href="/HTML/influencias.html">
                 <h4 class="liTecnicas">Influencias</h4>
             </a>
@@ -39,8 +40,14 @@
     <div class="divModal">
         <div class="divCadastro">
             <h4 id="h4Cadastro">Log-In</h4>
-            <input type="text" id="iptEmail" class="iptCadastro" placeholder="Email:"> <br>
-            <input type="password" id="iptSenha" class="iptCadastro" placeholder="Senha:"> <br>
+            <div class="field">
+                <input type="text" required autocomplete="off" id="iptEmail">
+                <label for="iptEmail" title="Email:" data-title="Email:"></label>
+            </div>
+            <div class="field">
+                <input type="password" required autocomplete="off" id="iptSenha">
+                <label for="iptSenha" title="Senha:" data-title="Senha:"></label>
+            </div>
             <button class="buttonCadastro">Entrar</button> <br>
         </div>
     </div>
@@ -64,3 +71,14 @@
 </body>
 
 </html>
+
+<script>
+    function verify() {
+        if (email.indexOf("@") == -1 || email.indexOf(".") == -1) {
+            alert("Informe um email válido.")
+        }
+        if (nome == "" || email == "" || senha == "" || confirmarSenha == "") {
+            alert("Por favor informe todos os dados.")
+        }
+    }
+</script>

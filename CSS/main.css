@@ -50,36 +50,43 @@ a {
 
 .imgLogo:hover {
     transform: scale(1.1);
+    transition: all 0.5s;
 }
 
 .liAulas:hover {
     text-decoration: underline;
     transform: scale(1.1);
+    transition: all 0.5s;
 }
 
 .liPosicionamento:hover {
     text-decoration: underline;
     transform: scale(1.1);
+    transition: all 0.5s;
 }
 
 .liSobre:hover {
     text-decoration: underline;
     transform: scale(1.1);
+    transition: all 0.5s;
 }
 
 .liLogin:hover {
     text-decoration: underline;
     transform: scale(1.1);
+    transition: all 0.5s;
 }
 
 .liCadastro:hover {
     text-decoration: underline;
     transform: scale(1.1);
+    transition: all 0.5s;
 }
 
 .liTecnicas:hover {
     text-decoration: underline;
     transform: scale(1.1);
+    transition: all 1s;
 }
 
 /* Modal = Como eu chamo o meiozinho */
@@ -126,7 +133,7 @@ a {
     font: bolder;
     justify-content: left;
     font-size: 35px;
-    background: rgb(159, 159, 159);
+    background: black;
 
 }
 
@@ -140,7 +147,7 @@ a {
     color: aliceblue;
     font: bolder;
     font-size: 35px;
-    background: rgb(159, 159, 159);
+    background: black;
 
 
 }
@@ -149,7 +156,7 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 50%;
+    width: 40%;
     height: 100px;
     background-color: black;
     border-bottom-right-radius: 40px;
@@ -189,7 +196,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: right;
-    width: 50%;
+    width: 40%;
     height: 100px;
     background-color: black;
     border-bottom-left-radius: 40px;
@@ -198,6 +205,7 @@ a {
     margin-bottom: 20px;
     padding-right: 80px;
     border: solid goldenrod 2px;
+    border-right: none;
 }
 
 .imgPosicionamento {
@@ -240,10 +248,8 @@ a {
 
 .divCard:hover {
     text-decoration: underline;
-    transform: scale(1.1);
 }
 
 .divCard2:hover {
     text-decoration: underline;
-    transform: scale(1.1);
 }
