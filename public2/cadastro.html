@@ -115,12 +115,12 @@
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
         var nomeVar = nome_input.value;
-        var cpfVar = cpf_input.value
+        var areaAtuacao = cpf_input.value
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
-        if (nomeVar.length <= 1 || emailVar.indexOf("@") == -1 || emailVar.indexOf(".") == -1 || senhaVar.length <= 6 || cpfVar.length != 14) {
+        if (nomeVar.length <= 1 || emailVar.indexOf("@") == -1 || emailVar.indexOf(".") == -1 || senhaVar.length <= 6 || areaAtuacao.length != 14) {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = `Dados Inseridos incorretamente. Verifique seus dados`;
 
@@ -136,7 +136,7 @@
             return false;
         }
 
-        if (nomeVar == "" || cpfVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        if (nomeVar == "" || areaAtuacao == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
@@ -157,7 +157,7 @@
                 // crie um atributo que recebe o valor recuperado aqui
                 // Agora vá para o arquivo routes/usuario.js
                 nomeServer: nomeVar,
-                cpfServer: cpfVar,
+                areaAtuacaoServer: areaAtuacao,
                 emailServer: emailVar,
                 senhaServer: senhaVar
             })
